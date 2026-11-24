@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tech Needs Her · UMD (Dark)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tnh2.css">
+</head>
+<body id="top">
+<div class="bgvid" aria-hidden="true"><div class="glow"></div><video id="bgv" muted loop playsinline preload="auto"></video></div>
+<div class="flag" aria-hidden="true"></div>
+<nav aria-label="Main"><b>Tech Needs Her</b>
+<a href="#top">Home</a><a href="#events">Events</a><a href="#programs">Programs</a><a href="#mentors">Mentors</a><a href="#involved">Get involved</a><a href="#directory">Directory</a><a href="#contact">Contact</a></nav>
+
+<section class="hero">
+<h1 class="title" aria-label="Tech Needs Her."><span aria-hidden="true"><span class="ch" style="--i:0">T</span><span class="ch" style="--i:1">e</span><span class="ch" style="--i:2">c</span><span class="ch" style="--i:3">h</span> <span class="ch y" style="--i:5">N</span><span class="ch" style="--i:6">e</span><span class="ch" style="--i:7">e</span><span class="ch" style="--i:8">d</span><span class="ch" style="--i:9">s</span> <span class="ch r" style="--i:11">H</span><span class="ch" style="--i:12">e</span><span class="ch" style="--i:13">r</span><span class="ch" style="--i:14">.</span></span></h1>
+<div class="herogrid">
+<div>
+<p>A central resource for current and prospective Terps to connect, find opportunities, and grow in tech. Find a mentor, a club, a story that sounds like yours, and people who’ll save you a seat.</p>
+<div class="row"><a class="btn" href="#involved">Get involved</a><a class="btn ghost" href="#mentors">Find a mentor</a></div>
+</div>
+<aside class="dyk factbox" id="factBox" aria-label="Fun fact">
+<h3>Fun fact</h3>
+<p class="fact" id="fact" aria-live="polite"></p>
+<button class="btn alt" id="nextFact" type="button">Show another</button>
+</aside>
+</div>
+<div class="quick">
+<a href="#clubs">Relevant organizations<span>Clubs and communities to join</span></a>
+<a href="#events">Upcoming events<span>Panels, workshops, hackathons</span></a>
+<a href="#mentors">Mentor matching<span>Get paired for a semester</span></a>
+</div>
+<div class="wall">
+<h3>The belonging wall</h3>
+<form id="wallForm"><input id="wallName" placeholder="First name or nickname" aria-label="Your name" required maxlength="20">
+<select id="wallRole" aria-label="Your status"><option>Current student</option><option>Prospective student</option><option>Alumna</option></select>
+<button class="btn pink" type="submit">I belong in tech</button></form>
+<div class="chips" id="wallChips" aria-live="polite"></div>
+</div>
+</section>
+
+<section id="mentors">
+<h2>Mentor and mentee matching</h2>
+<p class="lede">Pair up with someone a few steps ahead of you, or a few steps behind. Tell us what you want to talk about and we’ll match you each semester.</p>
+<div class="mentor">
+<form id="mForm">
+<label>I want to be a<select id="mRole"><option>Mentee</option><option>Mentor</option></select></label>
+<label>My year<select id="mYear"><option>Prospective student</option><option>Freshman</option><option>Sophomore</option><option>Junior</option><option>Senior</option><option>Graduate</option></select></label>
+<label>I’m interested in<select id="mTopic"><option>Software engineering</option><option>Cybersecurity</option><option>Data science and AI</option><option>Product and design</option><option>Hardware and robotics</option></select></label>
+<label>Email<input type="email" id="mMail" placeholder="you@umd.edu" required></label>
+<button class="btn pink" type="submit">Request a match</button>
+</form>
+<div>
+<div class="card"><h3>How it works</h3><p>You answer four questions. A coordinator pairs you by interest and schedule. You meet about twice a month, over coffee or Zoom, for one semester.</p></div>
+<div class="ok" id="mOut" style="margin-top:18px" role="status" aria-live="polite">Your match request will show up here.</div>
+</div></div>
+<h2 class="s">Mentor catalog</h2>
+<div id="mc"></div>
+<p class="note">Mentor profiles are placeholders. Add real mentors with their permission.</p>
+</section>
+
+<section id="clubs" style="padding-top:24px">
+<h2>Organization catalog</h2>
+<p class="lede">Pick an interest to see where people are already building together.</p>
+<div class="filters" id="cf" role="group" aria-label="Filter clubs"></div>
+<div class="grid" id="cg"></div>
+<p class="note">Club details are sample content for this prototype. Confirm names, meeting times, and contacts with each club before launch.</p>
+</section>
+
+<section id="programs" style="padding-top:24px">
+<h2>Programs</h2>
+<p class="lede">Structured ways to learn, apply, and get funded.</p>
+<div class="grid" id="pg"></div>
+<p class="note">Program details are sample content.</p>
+</section>
+
+<section id="involved" style="padding-top:24px">
+<h2>Get involved</h2>
+<p class="lede">Stay on top of deadlines and find a way to pitch in.</p>
+<div class="two">
+<div><h3 style="margin-bottom:14px">Reminders</h3><div id="rem"></div></div>
+<div><h3 style="margin-bottom:14px">Ways to get involved</h3><div id="ways"></div><div class="ok" id="wayOut" role="status" aria-live="polite" hidden></div></div>
+</div>
+</section>
+
+<div class="bigwrap"><section class="big" id="stories">
+<h2>Stories from women in tech</h2>
+<p class="lede">Real paths are rarely straight. Open a story to read how someone got here.</p>
+<div style="display:grid;gap:14px" id="sg"></div>
+<p class="note">These are placeholder profiles. Replace them with interviews from UMD students and alumnae, with their permission.</p>
+</section></div>
+
+<section id="events">
+<h2>Event calendar</h2>
+<p class="lede">Hackathons, study nights, career panels, and a few just-for-fun gatherings.</p>
+<div class="calwrap">
+<div class="cal"><h3>March 2027</h3><div class="cg" id="cal"></div></div>
+<div><h3 style="margin-bottom:12px">Highlighted in March</h3><div id="marEv"></div></div>
+</div>
+<div id="eg"></div>
+<p class="note">Dates are sample content.</p>
+</section>
+
+<section id="scan" style="padding-top:24px">
+<h2>Did you know?</h2>
+<p class="lede">A number worth knowing, and a quick way to jump in.</p>
+<div class="dyk wide">
+<p class="stat">Women make up only about 25% of computer science majors at UMD.</p>
+<div>
+<div class="scan"><svg id="qr" viewBox="0 0 21 21" aria-hidden="true"></svg><span>Scan to get involved, find resources, and learn more.</span></div>
+<small>Sample statistic and decorative code. Confirm the number and add a real link before launch.</small>
+</div></div>
+</section>
+
+<section id="directory" style="padding-top:24px">
+<h2>Directory</h2>
+<p class="lede">Everything in one place.</p>
+<div class="dir"><a href="#clubs">Organizations<small>Clubs and communities</small></a><a href="#mentors">Mentors<small>Browse profiles</small></a><a href="#programs">Programs<small>Workshops and funding</small></a></div>
+</section>
+
+<div class="flag" aria-hidden="true"></div>
+<footer id="contact">Questions? Email <a href="mailto:techneedsher@umd.edu">techneedsher@umd.edu</a> (sample address).<br>Tech Needs Her is a University of Maryland research project. This is a prototype.</footer>
+
+<script src="tnh2.js"></script>
+</body>
+</html>
