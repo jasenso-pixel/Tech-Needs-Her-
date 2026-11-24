@@ -102,7 +102,7 @@ if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
 }
 
 // Fade the background as people scroll, down to a minimum (never fully gone)
-const MIN_FADE=0.6; // 0.25 = video still shows at 25% of its strength at the bottom of the page
+const MIN_FADE=0.15; // 0.25 = video still shows at 25% of its strength at the bottom of the page
 let tick=false;
 function fade(){tick=false;const max=document.documentElement.scrollHeight-innerHeight,p=max>0?Math.min(scrollY/max,1):0;document.documentElement.style.setProperty('--vo',(1-(1-MIN_FADE)*p).toFixed(3))}
 addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(fade)}},{passive:true});
