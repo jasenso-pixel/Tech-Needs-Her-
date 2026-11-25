@@ -8,7 +8,7 @@ for(let y=0;y<21;y++)for(let x=0;x<21;x++){const f=fin(x,y);if(f===1||(f===null&
 $('#qr').innerHTML=h})();
 
 // Belonging wall
-const names=[['Maya','Current student'],['Priya','Prospective student'],['Aisha','Alumna']];
+const names=[['Juanita','Current student'],['Idil','Current student'],['Noga','Current student'],];
 function drawWall(){$('#wallChips').innerHTML=names.map(n=>`<span class="chip">${esc(n[0])} · ${esc(n[1])}</span>`).join('')}
 $('#wallForm').addEventListener('submit',e=>{e.preventDefault();names.unshift([$('#wallName').value.trim(),$('#wallRole').value]);$('#wallName').value='';drawWall()});
 drawWall();
